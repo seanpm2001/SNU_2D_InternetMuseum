@@ -1,0 +1,751 @@
+<!--- start of script !--->
+<!DOCTYPE html>
+<HTML lang="en">
+<BODY>
+<HEAD>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="SNU_UNDERCONSTRUCTION_favicon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .css !--><!-- 04 !--<!-- Stylesheet 1 !--><link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- .css !--><!-- 05 !--<!-- Stylesheet 2 !--><link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 06 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Blackboard_kitV1.00B.css"><!-- The stylesheet for the white text !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 4 !--><link rel="stylesheet" type="text/css" href="BLOGPAGE_CUSTOMV1.01.css"> <!-- The stylesheet for the transparent boxes !--><!-- external resource !-->
+</head>
+<style type="Text/CSS" lang="en" id="CSS_section">
+/* The CSS Transparent box inline stylesheet */
+/* Rule count: 3 */
+div.background { /* Rule 1 */
+	background: url(klematis.jpg) repeat;
+	border: 2px solid black;
+} /* End of rule 1 */
+div.transbox { /* Rule 2 */
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+	border: 1px solid black;
+	opacity: 0.6;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+} /* End of rule 2 */
+div.transbox p { /* Rule 3 */
+	margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+	font-weight: bold;
+	color: #ffffff;
+} /* End of rule 3 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #3 */
+/* The CSS Sidebar inline stylesheet */
+/* Rule count: 5 */
+body { /* Rule 1 */
+	margin: 0;
+} /* End of rule 1 */
+ul { /* Rule 2 */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 16%;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+} /* End of rule 2 */
+li a { /* Rule 3 */
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+} /* End of rule 3 */
+li a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: black;
+} /* End of rule 4 */
+li a:hover:not(.active) { /* Rule 5 */
+	background-color: #555;
+	color: black;
+} /* End of rule 5 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #4 */
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+*/
+H1 {
+	color: white;
+	font-family: "Tahoma";
+}
+H2 {
+	color: white;
+	font-family: "Tahoma";
+}
+H3 {
+	color: white;
+	font-family: "Tahoma";
+}
+H4 {
+	color: white;
+	font-family: "Tahoma";
+}
+H5 {
+	color: white;
+	font-family: "Tahoma";
+}
+H6 {
+	color: white;
+	font-family: "Tahoma";
+}
+p {
+	color: white;
+	font-family: "Courier";
+}
+HR {
+	color: cyan;
+}
+a:hover {
+	color: cyan;
+}
+a:active {
+	color: blue;
+}
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+/* Stylesheet version: 2 (February 16th 2020) */
+</style>
+<style type="Text/Css" lang="en" id="BlackBoardCSS">
+/* blackboard kit */
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* start of stylesheet */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+hr {
+	color: white;
+}
+HR {
+	color: white;
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* end of stylesheet */
+</style>
+<?php
+// No PHP available
+$Power2_16 = "65536";
+?>
+<script type="Text/JavaScript" lang="en">
+// Start of JavaScript console
+console.log("SocialMedia: FaceBook museum JavaScript console\n>>>");
+// End of JavaScript console
+</script>
+<ruby type="Text/Ruby" lang="ja">
+
+</ruby>
+<xml type="Text/XML" lang="en">
+
+</xml>
+<TITLE lang="en">YouTube - SNU Internet Museum</TITLE> <!-- Page title !-->
+</HEAD>
+<BODY BGCOLOR="FFFFFF"> <!-- Background color !-->
+<BODY BACKGROUND="GoogleTexture1.png"> <!-- Background image !-->
+<div class="topnav">
+<a class="active" href="">|⛩ You[Tube] Museum ⛩|</a><!-- Try to make the name stretch over the entire sidebar to near perfection !-->
+<a href="#PLACEHOLDER">(</a>
+<a href="about:blank">❎ Exit SNU</a><!-- empty link !--><!-- This button always exits the current SNU tab. This should be a built-in page on every browser (guaranteed to work on Chromium/Google Chrome and Mozilla Firefox !-->
+<a href="../!SNU2DSTART.html">⛺ <!-- Home page of mode !-->Home</a>
+<i><a href="YouTube_MUSEUM.html">The YouTube museum</a></i>
+<!-- Make sure it stays on a single line for all displays (until I can get a scrollbar in) try testing on displays with 1336 pixel width like I am !-->
+</div>
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+<!-- <HR> !-->
+<!-- Page title section can go here as well if desired !-->
+<!-- <HR> !-->
+<img src="INTERNET_MUSEUM_FAVICON.ico" alt="Logo_Profile_Icon" width="225" height="225">
+<HR>
+<li lang="en"><a class="active" href="#home">[YouTube - SNU Internet Museum</a></li>
+<HR>
+<details>
+	<summary><li lang="en"><a href="#EXPLORE">[Page index]</a></li></summary>
+	</details>
+	<li lang="en"><HR></li>
+	<details><summary><li id="">(Page navigation)</a></li></summary>
+	<li lang="en"><a href="#Top">Top of the page</a></li>
+	<li lang="en"><a href="#DownloadSection">Download section</a></li>
+	<li lang="en"><a href="#Recreation1">Recreation process</a></li>
+	<li lang="en"><a href="#Timeline">Timeline</a></li>
+	<li lang="en"><a href="#SnapshotSection">Snapshot section</a></li>
+	<li lang="en"><a href="#2005">2005 content</a></li>
+	<li lang="en"><a href="#2006">2006 content</a></li>
+	<li lang="en"><a href="#2007">2007 content</a></li>
+	<li lang="en"><a href="#2008">2008 content</a></li>
+	<li lang="en"><a href="#2009">2009 content</a></li>
+	<li lang="en"><a href="#2010">2010 content</a></li>
+	<li lang="en"><a href="#2011">2011 content</a></li>
+	<li lang="en"><a href="#2012">2012 content</a></li>
+	<li lang="en"><a href="#2013">2013 content</a></li>
+	<li lang="en"><a href="#2014">2014 content</a></li>
+	<li lang="en"><a href="#2015">2015 content</a></li>
+	<li lang="en"><a href="#2016">2016 content</a></li>
+	<li lang="en"><a href="#2017">2017 content</a></li>
+	<li lang="en"><a href="#2018">2018 content</a></li>
+	<li lang="en"><a href="#2019">2019 content</a></li>
+	<li lang="en"><a href="#2020">2020 content</a></li>
+	<li lang="en"><a href="#2021">2021 content</a></li>
+	<li lang="en"><a href="#Bottom">Bottom of the page</a></li>
+	</details>
+	<li lang="en"><HR></li>
+	<nav>
+	<li lang="en">* Section 1 (Page navigation)</li>
+	</nav>
+	<HR>
+	<!--<li lang="en">(Licensing info here)</li>!-->
+	<li lang="en">Copyright SeanWallaWalla (2015-2019)</li>
+	<li lang="en">Copyleft SeanWallaWalla (2019-2020)</li>
+	<li lang="en">SNU (2018-2020)</li>
+	<HR>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<HR>
+<section>
+<img src="1920px-YouTube_Logo_2017.png" alt="YouTubeLogo" width="600" height="140">
+<H1 lang="en" id="Top">YouTube museum - SNU Internet Museum 2.0</H1>
+<H2 lang="en"><button><H2 lang="en"><a href="MuseumLobby1.html">Back</a></H2></button></H2>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="Recreation1">Project: recreating the internet museum</H1>
+<H2 lang="en">The original legends of the internet has great potential, but it wasn't programmed that well, as my HTML knowledge was very primitive to what I have now. I am going to work on porting the original YouTube legends here, and improving on it significantly.</H2>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="TimeLine">Timeline</H1>
+<H2 lang="en"><button><a href="#2005">2005<a></button><button><a href="#2006">2006<a></button><button><a href="#2007">2007<a></button><button><a href="#2008">2008<a></button><button><a href="#2009">2009<a></button><button><a href="#2010">2010<a></button><button><a href="#2011">2011<a></button><button><a href="#2012">2012<a></button><button><a href="#2013">2013<a></button><button><a href="#2014">2014<a></button><button><a href="#2015">2015<a></button><button><a href="#2016">2016<a></button><button><a href="#2017">2017<a></button><button><a href="#2018">2018<a></button><button><a href="#2019">2019<a></button><button><a href="#2020">2020</a></button><!--<button><a href="#2021">2021</a></button></H2>
+</section>
+<HR>
+<section>
+<!-- Video section !--> <!-- Thank you Wikipedia for this script, and also for the poster tag !-->
+<!-- source: https://en.wikipedia.org/wiki/HTML5_video !-->
+<!-- <img src="Youtube_logo.jpg" alt="YouTube2005-2011_Logo_BroadcastYourself" width="280" height="60"> !-->
+<H2 lang="en">Playlist</H2>
+<p><button><a href="../MeAtTheZoo_FirstYouTubeVideo.mp4">Me at the zoo (2005) (18 seconds)<a></button></p>
+<p><button><a href="../Numa_Numa.mp4">Numa Numa (2004-2006) (89 seconds)</a></button></p>
+<p><button><a href="../Never Gonna Give You Up.mp4">Never gonna give you up (2009) (212 seconds)</a></button></p>
+<p><button><a href="../PewDiePie_FirstVideo.mp4">PewDiePie - Hug (2010) (215 seconds)</a></button></p>
+<p><button><a href="../WhydoYouTubeviewsfreezeat301views.mp4">Why do YouTube videos freeze at 301 views (2012) (587 seconds)</a></button></p>
+<p><button><a href="../Gagnam Style.mp4">Gagnam style (2012) (252 seconds)</a></button></p>
+<p>Total duration: 1,.373 seconds (22 minutes, 53 seconds)</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2005">YouTube 2005 era - The first year (pre-Google era)</H1>
+</section>
+<HR>
+<section>
+<H2 lang="en">First YouTube video</H2>
+<H1 lang="en">Me at the zoo</H1>
+<video src="../MeAtTheZoo_FirstYouTubeVideo.mp4" poster="YouTube_firstVideo_Thumbnail.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video>
+<H2 lang="en">Creator: jawed</H2>
+<H2 lang="en">Upload date: April 23rd 2005</H2>
+<H2 lang="en">Resolution: 320x240 (240p)</H2>
+<H2 lang="en">Language: English</H2>
+<details><summary><H2 lang="en">Other video information</H2></summary>
+<H2 lang="en">File size: 790,527 bytes (790.52 Kilobytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 18 seconds</H2>
+<H2 lang="en">Framerate: 15 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="../MeAtTheZoo_FirstYouTubeVideoArchive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This was the very first video uploaded to YouTube. It marks the start of the platform.</p>
+</section>
+<HR>
+<section>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2006">YouTube 2006 era - The second year + start of post-Google era</H1>
+<H1 lang="en">Numa Numa</H1>
+<video src="../Numa_Numa.mp4" type="video/mp4" poster="NumaNuma_Thumbnail.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video> 
+<H2 lang="en">Creator: Dork Daily/Gary Brolsma</H2>
+<H2 lang="en">Upload date: December 11th 2006</H2>
+<H2 lang="en">Originally uploaded to NewGrounds on: December 6th 2004</H2>
+<H2 lang="en">Video resolution: 480x360 (360p)</H2>
+<H2 lang="en">Voiceover of: O-Zone - Dragostea din tei</H2>
+<H3 lang="en">Original audio:</H3>
+<audio src=""></audio>
+<H2 lang="en">Language: Romanian</H2>
+<details><summary><H2 lang="en">Other video information</H2></summary>
+<H2 lang="en">File size: 4,733,140 bytes (4,733.14 Kilobytes) (4.73 Megabytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 1 Minute 29 seconds (89 seconds)</H2>
+<H2 lang="en">Framerate: 30 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="../Numa_Numa_Archive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This was one of the first viral music videos on YouTube.</p>
+<H2 lang="en">Backstory on NewGrounds</H2>
+<p>This video was originally uploaded to NewGrounds on December 6th 2004. Unfortunately, it was taken down in late 2016 by the NewGrounds moderation team</p>
+</section>
+<HR>
+<section>
+<p>EVENT</p>
+<H3 lang="en">October 9th 2006 - Google buys YouTube for US $1.65 Billion</H3>
+</section>
+<HR>
+<section>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2007">YouTube 2007 era - The third year</H1>
+<!-- Animator Vs animation is not available here due to topics of relevancy. There were loads of other animations at the time, and I am working on finding a more fitting spot for the video. If you still want to see it here, uncomment the script on line 80 and line 99 (remove this on both ends: !-->
+<!--
+<H1 lang="en">Animator vs. Animation (original)</H1>
+<video width="480" height="360" controls>
+	<source src="../Animator vs. Animation.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video> 
+<H2 lang="en">Creator: Alan Becker</H2>
+<H2 lang="en">Upload date: May 14th 2007</H2>
+<H2 lang="en">Language: English</H2>
+<details><summary><p>Other video information</p></summary>
+<H2 lang="en">File size: 4,871,905 bytes (4,871.90 Kilobytes) (4.87 Megabytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 2 Minute 1 second</H2>
+<H2 lang="en">Framerate: 30 frames per second</H2>
+</details>
+<H2 lang="en">Download link:
+<a href="../AnimatorVsAnimationArchive.zip">Click here to download</a>
+<H1 lang="en">Significance:</H1>
+<p>This was a very detailed animation by Alan Becker, which inspired many other animators</p>
+<HR>
+!-->
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2008">YouTube 2008 era - The fourth year</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2009">YouTube 2009 era - The fifth year - Year of Sound System 09, many great videos, and adoption by Vevo</H1>
+<H1 lang="en">Rick Astley - Never Gonna Give You Up (video)</H1>
+<video src="../Never Gonna Give You Up.mp4" type="video/mp4" poster="RickAstleyNGGYU_Thumb.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video> 
+<H2 lang="en">Creator: Official Rick Astley</H2>
+<H2 lang="en">Upload date: July 5th 2012</H2>
+<H2 lang="en">Video resolution: 1280x720 (720p)</H2>
+<H2 lang="en">Language: English</H2>
+<details><summary><H2 lang="en">View other video information</H2></summary>
+<H2 lang="en">File size: 33,649,802 bytes (33,649.80 Kilobytes) (33.64 Megabytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 3 Minute 32 seconds (212 seconds)</H2>
+<H2 lang="en">Framerate: 25 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="NeverGonnaGiveYouUpArchive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This video is the origin of the rick roll meme, one of the most linked videos on the site.</p>
+</section>
+<HR>
+<section>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2010">YouTube 2010 era - The sixth year - First rewind, the beginning of PewDiePie, last full year of the broadcast yourself brand</H1>
+</section>
+<HR>
+<section>
+<H1 lang="en">Hug</H1>
+<video src="../PewDiePie_FirstVideo.mp4" type="video/mp4" poster="PewDiePieFirstThumb.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video> 
+<H2 lang="en">Creator: PewDiePie</H2>
+<H2 lang="en">Upload date: April 29th 2010 (unknown actual date, closest chosen)</H2>
+<H2 lang="en">Video resolution 480x360 (360p)</H2>
+<H2 lang="en">Language: English</H2>
+<!-- I cannot currently find the date and original name of the first PewDiePie video. I have tried using the WayBack machine, searching, Wikipedia, but I can't find it. It was his first video and he deleted it. Luckily, there are backups, and I chose one !-->
+<details><summary><H2 lang="en">View other video information</H2></summary>
+<H2 lang="en">File size: 12,409,106 bytes (12,409.10 Kilobytes) (12.40 Megabytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 3 Minute 35 seconds (215 seconds)</H2>
+<H2 lang="en">Framerate: 25 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="../PewDiePie_FirstVideoArchive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This was the first YouTube video made by PewDiePie, one of YouTubes most popular and influential YouTubers. He remained most subscribed until his fall to T-series in 2019. He is still the #1 subscribed content creator, T-series is just a company</p>
+<H2 lang="en">Developer notes:<H2 lang="en">
+<p><i> I cannot currently find the date and original name of the first PewDiePie video. I have tried using the WayBack machine, searching, Wikipedia, but I can't find it. It was his first video and he deleted it. Luckily, there are backups, and I chose one</i></p>
+</section>
+<HR>
+<section>
+<H1 lang="en">YouTube Rewind 2010: Year in Review</H1>
+<video src="../YouTube Rewind 2010_ Year in Review.mp4" type="video/mp4" poster="YouTubeRewind2010_Thumb.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video> 
+<H2 lang="en">Creator: YouTube Spotlight</H2>
+<H2 lang="en">Upload date: December 13th 2010</H2>
+<H2 lang="en">Video resolution: 1920x1080 (1080p)</H2>
+<H2 lang="en">Language: English</H2>
+<details><summary><H2 lang="en">View other video information</H2></summary>
+<H2 lang="en">File size: 18,249,841 bytes (18,249.84 Kilobytes) (18.24 Megabytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 1 Minute 25 seconds (85 seconds)</H2>
+<H2 lang="en">Framerate: 30 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="../YouTubeRewind2010Archive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This was the first YouTube rewind video made by YouTube</p>
+</section>
+<HR>
+<section>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2011">YouTube 2011 era - The seventh year - Start of the Google+ apocalypse</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2012">YouTube 2012 era - The eighth year</H1>
+</section>
+<HR>
+<section>
+<H1 lang="en">Why do YouTube videos freeze at 301 views?</H1>
+<video src="../WhydoYouTubeviewsfreezeat301views.mp4" type="video/mp4" poster="301_view_freeze_Thumb.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video> 
+<H2 lang="en">Creator: Numberphile</H2>
+<H2 lang="en">Upload date: June 22nd 2012</H2>
+<H2 lang="en">Video resolution: 1280x720 (720p)</H2>
+<H2 lang="en">Language: English</H2>
+<H3 lang="en">Highlighted description quote: "This glitch was finally "fixed" in August 2015, but may it live on in our hearts."</H3>
+<details><summary><H2 lang="en">View other video information</H2></summary>
+<H2 lang="en">File size: 63,645,415 bytes (63,645.41 Kilobytes) (63.64 Megabytes)</H2>
+<H2 lang="en">File format: MP4</H2>
+<H2 lang="en">Duration: 9 minutes 47 seconds (587 seconds)</H2>
+<H2 lang="en">Framerate: 25 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="../WhydoYouTubeviewsfreezeat301viewsArchive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This video talks about an early YouTube glitch that was fixed in August 2015 when YouTube videos freeze at 301 views to verify the view count. However, YouTube also did something special for this video: they locked the view count at 301</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" lang="ko">PSY - GANGNAM STYLE(강남스타일) M/V</H1>
+<video src="../Gagnam Style.mp4" type="video/mp4" poster="PSY_GAGNAMSTYLE_THUMB.png" controls>
+This is fallback content to display for user agents that do not support the video tag.
+</video> 
+<H2 lang="en">Creator: Psy</H2>
+<H2 lang="en">Upload date: July 15th 2012</H2>
+<H2 lang="en">Video resolution: 1920x1080 (1080p)</H2>
+<H2 lang="en">Language: Korean</H2>
+<details><summary><H2 lang="en">View other video information</H2></summary>
+<H2 lang="en">File size: 86,211,090 bytes (86,211.09 Kilobytes) (86.21 Megabytes)</H2>
+<H2 lang="en">File format: MP4 (MPEG Part 14)</H2>
+<H2 lang="en">Duration: 4 Minute 12 seconds (252 seconds)</H2>
+<H2 lang="en">Framerate: 24 frames per second</H2>
+</details>
+<H2 lang="en">Download link: <button><a href="../GagnamStyleArchive.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<p>This was the first video to exceed the maximum value of a 32 bit integer in views, and YouTube views were still being recorded by a 32 bit integer. This video raised the roof and forced YouTube to switch the view counter to a 64 bit integer. It was also the first video to reach 1 billion views</p>
+</section>
+<HR>
+<section>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2013">YouTube 2013 era - The ninth year</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2014">YouTube 2014 era - The tenth year</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2015">YouTube 2015 era - The eleventh year - Beginning of the downfall</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2016">YouTube 2016 era - The twelth year - Start of the first adpocalypse</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2017">YouTube 2017 era - The thirteenth year - Falling away from the creators</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2018">YouTube 2018 era - The fourteenth year - The "You" in <b>You</b>Tube no longer applies, Google has fallen from its creators that once made it great</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2019">YouTube 2019 era - The fifteenth year - Creators have been succeeded by companies and bad channels, the good top creator still uploads</H1>
+<p>No more content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2020">YouTube 2020 era - The sixteenth year - Still no good alternate, YouTube is now just a soul-less dependency</H1>
+<p>Unknown status. No new content available in this build</p>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="2021">YouTube 2021 era - The seventeenth year - ??????</H1>
+<p>This year has not yet occured</p>
+</section>
+<HR>
+<section>
+<details><summary><H2 lang="en" id="SnapshotSection">View older versions of this page</H2></summary>
+<H3 lang="en">Snapshots 1 to 10</H3>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot1.html">Snapshot 1 (August 10th 2019)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot2.html">Snapshot 2 (August 11th 2019)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot3.html">Snapshot 3 (March 28th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot4.html">Snapshot 4 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot5.html">Snapshot 5 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot6.html">Snapshot 6 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot7.html">Snapshot 7 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot8.html">Snapshot 8 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot9.html">Snapshot 9 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot10.html">Snapshot 10 (No date)</a></button></H4>
+<H3 lang="en">Snapshots 11 to 20</H3>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot11.html">Snapshot 11 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot12.html">Snapshot 12 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot13.html">Snapshot 13 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot14.html">Snapshot 14 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot15.html">Snapshot 15 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot16.html">Snapshot 16 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot17.html">Snapshot 17 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot18.html">Snapshot 18 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot19.html">Snapshot 19 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="YouTube_MUSEUM_Snapshot20.html">Snapshot 20 (No date)</a></button></H4>
+</details>
+</section>
+<HR>
+<section>
+<H6 lang="en" id="Bottom">You have reached the bottom of this page!</H6>
+</section>
+</HR>
+<footer>
+<p lang="en">Footer is not yet properly setup.</p>
+</footer>
+</BODY>
+</HTML>
+<!-- Bottom script (filler) !-->
+<!--- end of script !--->
+<!-- Whitespace for compiler (indents are for fun) !-->
+ 
+  
+   
+	

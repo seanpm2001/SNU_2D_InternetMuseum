@@ -1,0 +1,695 @@
+<!--- start of script !--->
+<!DOCTYPE html>
+<HTML lang="en">
+<BODY>
+<HEAD>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="SNU_UNDERCONSTRUCTION_favicon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .css !--><!-- 04 !--<!-- Stylesheet 1 !--><link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- .css !--><!-- 05 !--<!-- Stylesheet 2 !--><link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 06 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Blackboard_kitV1.00B.css"><!-- The stylesheet for the white text !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 4 !--><link rel="stylesheet" type="text/css" href="BLOGPAGE_CUSTOMV1.01.css"> <!-- The stylesheet for the transparent boxes !--><!-- external resource !-->
+</head>
+<style type="Text/CSS" lang="en" id="CSS_section">
+/* The CSS Transparent box inline stylesheet */
+/* Rule count: 3 */
+div.background { /* Rule 1 */
+	background: url(klematis.jpg) repeat;
+	border: 2px solid black;
+} /* End of rule 1 */
+div.transbox { /* Rule 2 */
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+	border: 1px solid black;
+	opacity: 0.6;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+} /* End of rule 2 */
+div.transbox p { /* Rule 3 */
+	margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+	font-weight: bold;
+	color: #ffffff;
+} /* End of rule 3 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #3 */
+/* The CSS Sidebar inline stylesheet */
+/* Rule count: 5 */
+body { /* Rule 1 */
+	margin: 0;
+} /* End of rule 1 */
+ul { /* Rule 2 */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 16%;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+} /* End of rule 2 */
+li a { /* Rule 3 */
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+} /* End of rule 3 */
+li a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: black;
+} /* End of rule 4 */
+li a:hover:not(.active) { /* Rule 5 */
+	background-color: #555;
+	color: black;
+} /* End of rule 5 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #4 */
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+*/
+H1 {
+	color: white;
+	font-family: "Tahoma";
+}
+H2 {
+	color: white;
+	font-family: "Tahoma";
+}
+H3 {
+	color: white;
+	font-family: "Tahoma";
+}
+H4 {
+	color: white;
+	font-family: "Tahoma";
+}
+H5 {
+	color: white;
+	font-family: "Tahoma";
+}
+H6 {
+	color: white;
+	font-family: "Tahoma";
+}
+p {
+	color: white;
+	font-family: "Courier";
+}
+HR {
+	color: cyan;
+}
+a:hover {
+	color: cyan;
+}
+a:active {
+	color: blue;
+}
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+/* Stylesheet version: 2 (February 16th 2020) */
+</style>
+<style type="Text/Css" lang="en">
+/* blackboard kit */
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* start of stylesheet */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+hr {
+	color: white;
+}
+HR {
+	color: white;
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* end of stylesheet */
+</style>
+<?php
+// No PHP available
+$Power2_16 = "65536";
+?>
+<script type="Text/JavaScript" lang="en">
+// Start of JavaScript console
+console.log("SocialMedia: Vinesauce museum JavaScript console\n>>>");
+// End of JavaScript console
+</script>
+<ruby type="Text/Ruby" lang="ja">
+
+</ruby>
+<xml type="Text/XML" lang="en">
+
+</xml>
+<TITLE lang="en">Vinesauce - SNU Internet museum</TITLE>
+</HEAD>
+<BODY BGCOLOR="GREEN">
+<BODY BACKGROUND="VinesauceLogoTexture.png">
+<div class="topnav">
+<a class="active" href="">|⛩ Vinesauce Museum ⛩|</a><!-- Try to make the name stretch over the entire sidebar to near perfection !-->
+<a href="#PLACEHOLDER">(</a>
+<a href="about:blank">❎ Exit SNU</a><!-- empty link !--><!-- This button always exits the current SNU tab. This should be a built-in page on every browser (guaranteed to work on Chromium/Google Chrome and Mozilla Firefox !-->
+<a href="../!SNU2DSTART.html">⛺ <!-- Home page of mode !-->Home</a>
+<i><a href="Vinesauce_MUSEUM.html">The Vinesauce museum</a></i>
+<!-- Make sure it stays on a single line for all displays (until I can get a scrollbar in) try testing on displays with 1336 pixel width like I am !-->
+</div>
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+<!-- <HR> !-->
+<!-- Page title section can go here as well if desired !-->
+<!-- <HR> !-->
+<img src="INTERNET_MUSEUM_FAVICON.ico" alt="Logo_Profile_Icon" width="225" height="225">
+<HR>
+<li lang="en"><a class="active" href="#home">[Vinesauce - SNU Internet Museum</a></li>
+<HR>
+<details>
+	<summary><li lang="en"><a href="#EXPLORE">[Page index]</a></li></summary>
+	</details>
+	<li lang="en"><HR></li>
+	<details><summary><li id="">(Page navigation)</a></li></summary>
+	<li lang="en"><a href="#Top">Top of the page</a></li>
+	<li lang="en"><a href="#DownloadSection">Download section</a></li>
+	<li lang="en"><a href="#Recreation1">Recreation process</a></li>
+	<li lang="en"><a href="#Timeline">Timeline</a></li>
+	<li lang="en"><a href="#SnapshotSection">Snapshot section</a></li>
+	<li lang="en"><a href="#2010">2010 content</a></li>
+	<li lang="en"><a href="#2011">2011 content</a></li>
+	<li lang="en"><a href="#2012">2012 content</a></li>
+	<li lang="en"><a href="#2013">2013 content</a></li>
+	<li lang="en"><a href="#2014">2014 content</a></li>
+	<li lang="en"><a href="#2015">2015 content</a></li>
+	<li lang="en"><a href="#2016">2016 content</a></li>
+	<li lang="en"><a href="#2017">2017 content</a></li>
+	<li lang="en"><a href="#2018">2018 content</a></li>
+	<li lang="en"><a href="#2019">2019 content</a></li>
+	<li lang="en"><a href="#2020">2020 content</a></li>
+	<li lang="en"><a href="#2021">2021 content</a></li>
+	<li lang="en"><a href="#Bottom">Bottom of the page</a></li>
+	</details>
+	<li lang="en"><HR></li>
+	<nav>
+	<li lang="en">* Section 1 (Page navigation)</li>
+	</nav>
+	<HR>
+	<!--<li lang="en">(Licensing info here)</li>!-->
+	<li lang="en">Copyright SeanWallaWalla (2015-2019)</li>
+	<li lang="en">Copyleft SeanWallaWalla (2019-2020)</li>
+	<li lang="en">SNU (2018-2020)</li>
+	<HR>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<HR>
+<section>
+<img src="" alt="VinesauceLogo" width="600" height="230">
+<H1 lang="en" id="Top">Vinesauce museum - SNU Internet Museum 2.0</H1>
+<H2 lang="en"><button><H2 lang="en"><a href="MuseumLobby1.html">Back</a></H2></button></H2>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="Timeline">Timeline</H1>
+<H2 lang="en">
+<button><a href="#2010">2010</a></button>
+<button><a href="#2011">2011</a></button>
+<button><a href="#2012">2012</a></button>
+<button><a href="#2013">2013</a></button>
+<button><a href="#2014">2014</a></button>
+<button><a href="#2015">2015</a></button>
+<button><a href="#2016">2016</a></button>
+<button><a href="#2017">2017</a></button>
+<button><a href="#2018">2018</a></button>
+<button><a href="#2019">2019</a></button>
+<button><a href="#2020">2020</a></button>
+<button><a href="#2021">2021</a></button>
+</H2>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en">Worst of Vinesauce</H1></summary>
+<H2 lang="en">Unavailable in this build</H2>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en">Best of Vinesauce</H1></summary>
+<H2 lang="en">Unavailable in this build</H2>
+</details>
+</section>
+<HR>
+<section>
+<H1 lang="en">Vinesauce legends timeline</H1>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2010">2010</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2011">2011</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2012">2012</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2013">2013</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2014">2014</H1></summary>
+<H1 lang="en">2014</H1>
+<H1 lang="en">Windows XP destruction stream</H1>
+<H1 lang="en">NO CONTENT FROM Vinesauce.com available</H1>
+<H2 lang="en">Made by: Vargskeletor Joel - from Vinesauce</H2>
+<video width="480" height="360" controls>
+	<source src="../VINESAUCEJOEL_WINDOWXPDESTRUCTION_FULLSTREAM.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video> 
+<H2 lang="en">File size: 380,593,490 bytes (380,593.49 Kilobytes) (380.59 Megabytes)</H2>
+<H2 lang="en">Download as MP4 <button><a href="VINESAUCEJOELWINDOWXPDESTRUCTIONFULLSTREAMARCHIVE.zip">Click here to download</a></button></H2>
+<H1 lang="en">Significance:</H1>
+<H2 lang="en">One of Joel's most famous early streams. It brought recognition to an old spyware known as Bonzi buddy, and was taken down for copyright issues. The video was re=uploaded luckily, and this video alone brought a ton of recognition to Vinesauce</H2>
+<H2 lang="en">| <button><a href="../!VINESAUCE_LEGENDS_WINDOWS_XP_DESTRUCTION_FULL_STREAM.html">View old video page</a></button> | <button><a href="Vinesauce_WindowsXPDestruction_FullStream.html">View new video page</a></button> |</H2> 
+<HR>
+<H2 lang="en">YouTube poop Good.wmv</H2>
+<video width="640" height="480" controls>
+	<source src="../[Vinesauce] youtube poop good.wmv.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video> 
+<details><summary><H2 lang="en">Stats & download</H2>
+<H3 lang="en">Resolution: 640x480 (480p)</H3>
+<H3 lang="en">Duration: 1 minute 27 seconds</H3>
+<H3 lang="en">Framerate: 30 Frames per second</H3>
+<H3 lang="en">Original file type: WMV</H3>
+<H3 lang="en">Current file type: MP4</H3>
+<H3 lang="en">File size: 6,166,048 bytes (6,166.04 Kilobytes) (6.16 Megabytes)</H3>
+<H3 lang="en">| <button><a href="!VINESAUCE_YTPGOOD_VIDEOARCHIVE.zip">Click here to download</a></button></H3>
+</details>
+<H3 lang="en">| <button><a href="../!VINESAUCE_YTPGOOD_VIDEOPAGE.html">View the old video page</a></button> | <button><a href="Vinesauce_YTPGood_WMV_Video.html">View the new video page</a></button> |</H3>
+<H1 lang="en">Significance:</H1>
+<p lang="en">This is a parody video of YouTube Poops from 2006, it was part of the Windows Movie maker section of Vinesauce Joels Windows XP Destruction stream. This video was carried over from the SNU Internet Legends</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2015">2015</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2016">2016</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2017">2017</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2018">2018</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2019">2019</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2020">2020</H1></summary>
+<p lang="en">No more content available in this build</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H1 lang="en" id="2021">2021</H1></summary>
+<p lang="en">No more content available in this build</p>
+<p lang="en">This year has not yet occurred</p>
+</details>
+</section>
+<HR>
+<section>
+<H1 lang="en">That is the legacy of Vinesauce so far!</H1>
+</section>
+<HR>
+<!-- Original version !-->
+<template>
+<!--- start of script !--->
+<HTML>
+<HEAD>
+<STYLE>
+#red1 {
+  color: red;
+}
+#blue1 {
+  color: blue;
+}
+#green1 {
+  color: green;
+}
+#yellow1 {
+  color: yellow;
+}
+</STYLE>
+<TITLE>Vinesauce Legends - SNU</TITLE>
+</HEAD>
+<BODY BGCOLOR="	00FF00">
+<HR>
+<H6>This site is under construction</H6>
+<H3>Go back:
+<a href="!SNU_INTERNET_LEGENDS_MENU.html">Click here</a>
+<H1>======================================================================</H1>
+<img src="VinesauceLegendsLogo.png" alt="Vinesauce_Legends_Logo" width="600" height="320">
+<H1>======================================================================</H1>
+<H1>Vinesauce legends timeline</H1>
+<H1>======================================================================</H1>
+<H1>2010</H1>
+<H2>No significant events happened on Vinesauce in 2010</H1>
+<H1>======================================================================</H1>
+<H1>2011</H1>
+<H2>No significant events happened on Vinesauce in 2011</H1>
+<H1>======================================================================</H1>
+<H1>2012</H1>
+<H2>No significant events happened on Vinesauce in 2013</H1>
+<H1>======================================================================</H1>
+<H1>2013</H1>
+<H2>No significant events happened on Vinesauce in 2013</H1>
+<H1>======================================================================</H1>
+<H1>2014</H1>
+<H1>Windows XP destruction stream</H1>
+<H1>NO CONTENT FROM Vinesauce.com available</H1>
+<H2>Made by: Vargskeletor Joel:</H2>
+ <video width="480" height="360" controls>
+  <source src="VINESAUCEJOEL_WINDOWXPDESTRUCTION_FULLSTREAM.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+<H2>File size: 380,593,490 bytes (380,593.49 Kilobytes) (380.59 Megabytes)</H2>
+<H2>Download as MP4
+<a href="VINESAUCEJOELWINDOWXPDESTRUCTIONFULLSTREAMARCHIVE.zip">Click here to download</a>
+<H1>Significance:
+<H2>One of Joel's most famous early streams. It brought recognition to an old spyware known as Bonzi buddy, and was taken down for copyright issues. The video was reuploaded luckily</H2>
+<H2>|
+<a href="!VINESAUCE_LEGENDS_WINDOWS_XP_DESTRUCTION_FULL_STREAM.html">View video page</a> 
+<!-- <H2>No significant events happened on Vinesauce in 2014</H1> [OBSOLETE] Will remove when ready !-->
+<H1>======================================================================</H1>
+<H1>2015</H1>
+<H2>No significant events happened on Vinesauce in 2015</H1>
+<H1>======================================================================</H1>
+<H1>2016</H1>
+<H2>No significant events happened on Vinesauce in 2016</H1>
+<H1>======================================================================</H1>
+<H1>2017</H1>
+<H2>No significant events happened on Vinesauce in 2017</H1>
+<H1>======================================================================</H1>
+<H1>2018</H1>
+<H2>No significant events happened on Vinesauce in 2018</H1>
+<H1>======================================================================</H1>
+<H1>2019</H1>
+<H2>No significant events happened yet on Vinesauce in 2019</H1>
+<H1>======================================================================</H1>
+<H1>That is the legacy of Vinesauce!</H1>
+<H1>=======================================================================</H1>
+<H2>View older versions of this page</H2>
+<H3>Snapshot 1
+<a href="!SNU_VINESAUCE_LEGENDS_HOME_SNAPSHOT1.html">Click here</a>
+<H3>Snapshot 2
+<a href="!SNU_VINESAUCE_LEGENDS_HOME_SNAPSHOT2.html">Click here</a>
+<H3>Snapshot 3
+<a href="!SNU_VINESAUCE_LEGENDS_HOME_SNAPSHOT3.html">Click here</a>
+<H3>Snapshot 4
+<a href="!SNU_VINESAUCE_LEGENDS_HOME_SNAPSHOT4.html">Click here</a>
+<H3>Snapshot 5
+<a href="!SNU_VINESAUCE_LEGENDS_HOME_SNAPSHOT1.html">Click here</a>
+<H1>=======================================================================</H1>
+</HR>
+</BODY>
+</HTML>
+<!--- Unfortunately I can't include everything. These are only the most revolutionary changes to Vinesauce !--->
+<!--- end of script !--->
+</template>
+<section>
+<details><summary><H1 lang="en">Sources</H2></summary>
+<details><summary><H2 lang="en">Referenced videos</H2></summary>
+<p lang="en"><button><a href="https://www.youtube.com/watch?v=Yy318EfvbCM" alt="https://youtu.be/Yy318EfvbCM">Windows XP Destruction stream (Re-uploaded by Boxcarjakey)</a></button></p>
+</details>
+<HR>
+<details><summary><H2 lang="en">Channels</H2></summary>
+<p lang="en"><button><a href="https://www.youtube.com/channel/UCuy3UWJIfYB4fJDGd4bZZTg">Boxcarjakey (for the reupload) (https://www.youtube.com/channel/UCuy3UWJIfYB4fJDGd4bZZTg)</a></button></p>
+<p lang="en"><button><a href="https://www.youtube.com/user/vinesauce">Vinesauce channel (Vinny/Main) (https://www.youtube.com/user/vinesauce)</a></button></p>
+<p lang="en"><button><a href="https://www.youtube.com/user/exinthevatican">Vinesauce Joel (Joel/Vargskeletor) (https://www.youtube.com/user/exinthevatican)</a></button></p> 
+</details>
+</details>
+</section>
+<HR>
+</section>
+<section>
+<details><summary><H2 lang="en" id="SnapshotSection">View older versions of this page</H2></summary>
+<H3 lang="en">Snapshots 1 to 10</H3>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot1.html">Snapshot 1 (March 30th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot2.html">Snapshot 2 (April 5th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot3.html">Snapshot 3 (April 13th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot4.html">Snapshot 4 (April 14th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot5.html">Snapshot 5 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot6.html">Snapshot 6 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot7.html">Snapshot 7 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot8.html">Snapshot 8 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot9.html">Snapshot 9 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot10.html">Snapshot 10 (No date)</a></button></H4>
+<H3 lang="en">Snapshots 11 to 20</H3>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot11.html">Snapshot 11 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot12.html">Snapshot 12 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot13.html">Snapshot 13 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot14.html">Snapshot 14 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot15.html">Snapshot 15 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot16.html">Snapshot 16 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot17.html">Snapshot 17 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot18.html">Snapshot 18 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot19.html">Snapshot 19 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="Vinesauce_MUSEUM_Snapshot20.html">Snapshot 20 (No date)</a></button></H4>
+</details>
+</section>
+<HR>
+</HR>
+</BODY>
+</HTML>
+<!--- Unfortunately I can't include everything. These are only the most revolutionary changes to Vinesauce !--->
+<!--- end of script !--->
+<!-- Blank space for the compiler, plus extra indents !-->
+ 
+  
+   
+	
