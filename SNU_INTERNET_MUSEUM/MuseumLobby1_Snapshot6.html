@@ -1,0 +1,769 @@
+<!-- start of script !--> 
+<!DOCTYPE html>
+<HTML lang="en">
+<BODY>
+<head>
+	<meta charset="UTF-16">
+	<link rel="icon" href="INTERNET_MUSEUM_FAVICON.ico" type="image/x-icon"/>
+	<!--<link rel="stylesheet" type="text/css" href="Blackboard_kitV1.00B.css">!-->
+</head> 
+<?php
+// No PHP available
+$Power2_16 = "65536";
+?>
+<style type="Text/CSS" lang="en" id="CSS_section">
+/* The CSS Transparent box inline stylesheet */
+/* Rule count: 3 */
+div.background { /* Rule 1 */
+	background: url(klematis.jpg) repeat;
+	border: 2px solid black;
+} /* End of rule 1 */
+div.transbox { /* Rule 2 */
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+	border: 1px solid black;
+	opacity: 0.6;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+} /* End of rule 2 */
+div.transbox p { /* Rule 3 */
+	margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+	font-weight: bold;
+	color: #ffffff;
+} /* End of rule 3 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #3 */
+/* The CSS Sidebar inline stylesheet */
+/* Rule count: 5 */
+body { /* Rule 1 */
+	margin: 0;
+} /* End of rule 1 */
+ul { /* Rule 2 */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 16%;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+} /* End of rule 2 */
+li a { /* Rule 3 */
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+} /* End of rule 3 */
+li a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+li a:hover:not(.active) { /* Rule 5 */
+	background-color: #555;
+	color: white;
+} /* End of rule 5 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #4 */
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+*/
+H1 {
+	color: white;
+	font-family: "Tahoma";
+}
+H2 {
+	color: white;
+	font-family: "Tahoma";
+}
+H3 {
+	color: white;
+	font-family: "Tahoma";
+}
+H4 {
+	color: white;
+	font-family: "Tahoma";
+}
+H5 {
+	color: white;
+	font-family: "Tahoma";
+}
+H6 {
+	color: white;
+	font-family: "Tahoma";
+}
+p {
+	color: white;
+	font-family: "Courier";
+}
+HR {
+	color: cyan;
+}
+a:hover {
+	color: cyan;
+}
+a:active {
+	color: blue;
+}
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+/* Stylesheet version: 2 (February 16th 2020) */
+</style>
+<script type="Text/JavaScript" lang="en" id="JavaScriptSection">
+// Start of JavaScript console
+console.log("JavaScript console for the SNU Internet Museum lobby (entrance 1)\n>>>");
+// End of JavaScript console
+</script>
+<ruby type="Text/Ruby" lang="ja" id="RubySection">
+
+</ruby>
+<xml type="Text/XML" lang="en" id="XMLSection">
+
+</xml>
+<HEAD>
+<TITLE lang="en">SNU Internet Museum - Explore (Lobby)</TITLE>
+</HEAD>
+<BODY BGCOLOR="00ffff">
+<BODY BACKGROUND="MUSEUMLOBBYWALLTXTURE.png">
+<div class="topnav">
+<a class="active" href="">⛩ Lobby of the SNU Internet Museum</a><!-- Try to make the name stretch over the entire sidebar to near perfection !-->
+<a href="#PLACEHOLDER">(</a>
+<a href="about:blank">❎ Exit SNU</a><!-- empty link !--><!-- This button always exits the current SNU tab. This should be a built-in page on every browser (guaranteed to work on Chromium/Google Chrome and Mozilla Firefox !-->
+<a href="../!SNU2DSTART.html">⛺ <!-- Home page of mode !-->Home</a>
+<i><a href="MuseumLobby1.html">The lobby of the internet museum</a></i>
+<!-- Make sure it stays on a single line for all displays (until I can get a scrollbar in) try testing on displays with 1336 pixel width like I am !-->
+</div>
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+<!-- <HR> !-->
+<!-- Page title section can go here as well if desired !-->
+<!-- <HR> !-->
+<img src="INTERNET_MUSEUM_FAVICON.ico" alt="Logo_Profile_Icon" width="225" height="225">
+<HR>
+<li lang="en"><a class="active" href="#home">[Lobby of the SNU Internet Museum]</a></li>
+<HR>
+<details>
+	<summary><li lang="en"><a href="#EXPLORE">[SNU Internet Museum Lobby index]</a></li></summary>
+	</details>
+	<li lang="en"><HR></li>
+	<details><summary><li id="">(Page navigation)</a></li></summary>
+	<li lang="en"><a href="#Top">Top of the page</a></li>
+	<li lang="en"><a href="#DownloadSection">Download section</a></li>
+	<li lang="en"><a href="#SnapshotSection">Snapshot section</a></li>
+	<!--
+	
+	
+	Update this section
+	
+	
+	Leaving an excess amount of space to lock you into it
+	
+	
+	!-->
+	<li lang="en"><a href="#Bottom">Bottom of the page</a></li>
+	<li lang="en"><a href=".html">Link 1</a></li>
+	</details>
+	<li lang="en"><HR></li>
+	<nav>
+	<li lang="en">* Section 1 (Page navigation)</li>
+	</nav>
+	<HR>
+	<!--<li lang="en">(Licensing info here)</li>!-->
+	<li lang="en">Copyright SeanWallaWalla (2015-2019)</li>
+	<li lang="en">Copyleft SeanWallaWalla (2019-2020)</li>
+	<li lang="en">SNU (2018-2020)</li>
+	<HR>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<HR>
+<H1 id="Top">Museum lobby</H1>
+<H2 lang="en"><button><H3 lang="en"><a href="MuseumEntrance1.html">[ <- ] Click here to go back to the museum lobby</a></H3></button></H2>
+<HR>
+<section>
+<H1 lang="en" id="">Unsorted - Legend Site Archive</H1>
+<p lang="en"><a href="LegendSite/Legend_SiteArchive_Index.html">View the index</a></p>
+</section>
+<HR>
+<section>
+<H2 lang="en">Page navigation</H2>
+<H3 lang="en"><button><H4 lang="en"><a href="#Top">Top of the page</a></H4></button><button><H4 lang="en"><a href="#SocialMediaSection">Social Media section</a></H4></button><button><H4 lang="en"><a href="#FallenLegendsSection">Fallen legends section</a></H4></button><button><H4 lang="en"><a href="#InternetFoundersSection">Founders of the internet section</a></H4></button><button><H4 lang="en"><a href="#SnapshotSection">Page snapshot section</a></H4></button></H3>
+</section>
+<HR>
+<img src="SOCIAL_MEDIA_IMG001.png" alt="Decorative image" width="200" height="150">
+<HR>
+<details>
+<summary><H2 id="SocialMediaSection">Social Media</H2></summary>
+<H3 lang="en">List of social media sections</H3>
+<!-- #0-999 section !-->
+<HR>
+<section>
+<H4 lang="en"># section</H4>
+<p>
+<button><H1 lang="en"><a href="4chan_MUSEUM.html"><img src="4ChanLogo.png" alt="4ChanIco" width="48" height="48"> 4Chan</a></H1></button><!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- A section !-->
+<HR>
+<section>
+<H4 lang="en">A section</H4>
+<p>
+<button><H1 lang="en"><a href="Amazon_MUSEUM.html"><img src="AmazonIcon.png" alt="AmazonIco" width="48" height="48"> Amazon</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- B section !-->
+<HR>
+<section>
+<H4 lang="en">B section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+<!-- C section !-->
+<HR>
+<section>
+<H4 lang="en">C section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- D section !-->
+<HR>
+<section>
+<H4 lang="en">D section</H4>
+<p>
+<button><H1 lang="en"><a href="Digg_MUSEUM.html"><img src="DiggIcon.png" alt="DiggIco" width="48" height="48"> Digg</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- E section !-->
+<HR>
+<section>
+<H4 lang="en">E section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- F section !-->
+<HR>
+<section>
+<H4 lang="en">F section</H4>
+<p>
+<button><H1 lang="en"><a href="Facebook_MUSEUM.html"><img src="FacebookIcon.png" alt="FB" width="48" height="48"> Facebook</a></H1></button><!-- Page created August 12th 2019 !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- G section !-->
+<HR>
+<section>
+<H4 lang="en">G section</H4>
+<p>
+<button><H1 lang="en"><a href="Google-Plus_MUSEUM.html"><img src="GooglePlusIcon.png" alt="Google+Icon" width="48" height="48"> Google+</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- H section !-->
+<HR>
+<section>
+<H4 lang="en">H section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- I section !-->
+<HR>
+<section>
+<H4 lang="en">I section</H4>
+<p>
+<button><H1 lang="en"><a href="Instagram_MUSEUM.html"><img src="InstagramIcon.png" alt="InstagramIco" width="48" height="48"> Instagram</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- J section !-->
+<HR>
+<section>
+<H4 lang="en">J section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- K section !-->
+<HR>
+<section>
+<H4 lang="en">K section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- L section !-->
+<HR>
+<section>
+<H4 lang="en">L section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- M section !-->
+<HR>
+<section>
+<H4 lang="en">M section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- N section !-->
+<HR>
+<section>
+<H4 lang="en">N section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- O section !-->
+<HR>
+<section>
+<H4 lang="en">O section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- P section !-->
+<HR>
+<section>
+<H4 lang="en">P section</H4>
+<p>
+<button><H1 lang="en"><a href="Pinterest_MUSEUM.html"><img src="PinterestIcon.png" alt="PinterestIco" width="48" height="48"> Pinterest</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- Q section !-->
+<HR>
+<section>
+<H4 lang="en">Q section</H4>
+<p>
+<button><H1 lang="en"><a href="Quora_MUSEUM.html"><img src="QuoraIcon.png" alt="QuoraIco" width="96" height="48"> Quora</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- R section !-->
+<HR>
+<section>
+<H4 lang="en">R section</H4>
+<p>
+<button><H1 lang="en"><a href="Reddit_MUSEUM.html"><img src="RedditIcon.png" alt="REDDIT" width="48" height="48"> Reddit</a></H1></button> <!-- Page created August 11th 2019 !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- S section !-->
+<HR>
+<section>
+<H4 lang="en">S section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- T section !-->
+<HR>
+<section>
+<H4 lang="en">T section</H4>
+<p>
+<button><H1 lang="en"><a href="Twitter_MUSEUM.html"><img src="TwitterIcon.png" alt="TWITTER140280" width="48" height="48"> Twitter</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href="Tumblr_MUSEUM.html"><img src="TumblrIcon.png" alt="TumblrIco" width="48" height="48"> Tumblr</a></H1></button><!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+<!-- page not yet created !-->
+</p>
+</section>
+<!-- U section !-->
+<HR>
+<section>
+<H4 lang="en">U section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- V section !-->
+<HR>
+<section>
+<H4 lang="en">V section</H4>
+<p>
+<button><H1 lang="en"><a href="Vimeo_MUSEUM.html"><img src="VimeoIcon.png" alt="VimeoIcon" width="96" height="48"> Vimeo</a></H1></button> <!-- page not yet created !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- W section !-->
+<HR>
+<section>
+<H4 lang="en">W section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- X section !-->
+<HR>
+<section>
+<H4 lang="en">X section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- Y section !-->
+<HR>
+<section>
+<H4 lang="en">Y section</H4>
+<p>
+<button><H1 lang="en"><a href="YouTube_Museum.html"><img src="YouTubeIcon.png" alt="YT" width="48" height="48"> YouTube</a></H1></button> <!-- Page created August 10th 2019 !-->
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+<!-- Z section !-->
+<HR>
+<section>
+<H4 lang="en">Z section</H4>
+<p>
+<button><H1 lang="en"><a href=""><img src="" alt="" width="" height=""> ""</a></H1></button>
+</p>
+</section>
+</details>
+<HR>
+<section>
+<img src="MEMORIAL_HILL_IMG001.png" alt="R.I.P" width="200" height="150">
+</section>
+<HR>
+<section>
+<details><summary><H2 id="FallenLegendsSection">Fallen legends</H2></summary>
+<H2 lang="en">Deceased</H2>
+<p><button><p><a href="Terry_A_Davis_TEMPLEOS_Tribute.html">Terry A. Davis (the sole creator of J Operating System, Losethos, SparrowOS, and finally TempleOS</a></p></button></p>
+<p><button><p><a href="Adam Suonborai_PIE_PIVOTMONTIER_Tribute.html">Adam Suonborai (known as Pie Pivotmontier)</a></p></button></p>
+<H2 lang="en">---</H2>
+<p><button><p><a href="">**</a></p></button></p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H2 id="InternetFoundersSection">Founders of the internet and internet standards</H2></summary>
+<H2 lang="en">Founders</H2>
+<!-- <img src="FOUNDER_ROOM_IMG001.png" alt="FOUNDERS" width="200" height="150"> !-->
+<!-- <img src="TBL_WWW1.png" alt="FOUNDERS" width="1102" height="802"> !-->
+<img src="TBL_WWW1.png" alt="FOUNDERS" width="200" height="150"><!-- Moved this picture, as it made it look like he was part of the deceased section, Tim is still alive !-->
+<p><button><p><a href="">Tim Berners Lee (Invented the World Wide Web in 1989, created the first web browser in 1990)</a></p></button></p>
+<H2 lang="en">Improvers</H2>
+<p><button><p><a href="">Brendan Eich (creator of ECMAScript, and JavaScript)</a></p></button></p>
+<p><button><p><a href="">Rasmus Lerdorf (creator of PHP)</a></p></button></p>
+<H2 lang="en">Standards</H2>
+<p><button><p><a href="">W3C (World Wide Web Consortium)</a></p></button></p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H4 id="SnapshotSection">View older versions of this page</H4></summary>
+</section>
+<HR>
+<section>
+<details><summary><H5 lang="en">Snapshots 1 to 100</H5></summary>
+<HR>
+<p><b>WARNING ABOUT SNAPSHOT 1</b></p>
+<p><i>Snapshot 1 doesn't contain a snapshot section. You are going to have to use your browsers back feature to navigate away from it.</i></p>
+<HR>
+<H2 lang="en">Snapshots 1 to 10 (currently up to 5 as of August 13th 2019)</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot1.html">Snapshot 1 (July 9th 2019)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot2.html">Snapshot 2 (July 9th 2019)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot3.html">Snapshot 3 (August 11th 2019)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot4.html">Snapshot 4 (August 13th 2019)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot5.html">Snapshot 5 (August 13th 2019)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot6.html">Snapshot 6 (March 27th 2020)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot7.html">Snapshot 7 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot8.html">Snapshot 8 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot9.html">Snapshot 9 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot10.html">Snapshot 10 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 11 to 20</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot11.html">Snapshot 11 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot12.html">Snapshot 12 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot13.html">Snapshot 13 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot14.html">Snapshot 14 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot15.html">Snapshot 15 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot16.html">Snapshot 16 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot17.html">Snapshot 17 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot18.html">Snapshot 18 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot19.html">Snapshot 19 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot20.html">Snapshot 20 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 21 to 30</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot21.html">Snapshot 21 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot22.html">Snapshot 22 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot23.html">Snapshot 23 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot24.html">Snapshot 24 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot25.html">Snapshot 25 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot26.html">Snapshot 26 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot27.html">Snapshot 27 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot28.html">Snapshot 28 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot29.html">Snapshot 29 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot30.html">Snapshot 30 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 31 to 40</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot31.html">Snapshot 31 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot32.html">Snapshot 32 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot33.html">Snapshot 33 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot34.html">Snapshot 34 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot35.html">Snapshot 35 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot36.html">Snapshot 36 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot37.html">Snapshot 37 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot38.html">Snapshot 38 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot39.html">Snapshot 39 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot40.html">Snapshot 40 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 41 to 50</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot41.html">Snapshot 41 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot42.html">Snapshot 42 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot43.html">Snapshot 43 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot44.html">Snapshot 44 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot45.html">Snapshot 45 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot46.html">Snapshot 46 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot47.html">Snapshot 47 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot48.html">Snapshot 48 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot49.html">Snapshot 49 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot50.html">Snapshot 50 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 51 to 60</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot51.html">Snapshot 51 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot52.html">Snapshot 52 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot53.html">Snapshot 53 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot54.html">Snapshot 54 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot55.html">Snapshot 55 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot56.html">Snapshot 56 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot57.html">Snapshot 57 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot58.html">Snapshot 58 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot59.html">Snapshot 59 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot60.html">Snapshot 60 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 61 to 70</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot61.html">Snapshot 61 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot62.html">Snapshot 62 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot63.html">Snapshot 63 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot64.html">Snapshot 64 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot65.html">Snapshot 65 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot66.html">Snapshot 66 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot67.html">Snapshot 67 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot68.html">Snapshot 68 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot69.html">Snapshot 69 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot70.html">Snapshot 70 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 71 to 80</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot71.html">Snapshot 71 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot72.html">Snapshot 72 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot73.html">Snapshot 73 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot74.html">Snapshot 74 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot75.html">Snapshot 75 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot76.html">Snapshot 76 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot77.html">Snapshot 77 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot78.html">Snapshot 78 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot79.html">Snapshot 79 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot80.html">Snapshot 80 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 81 to 90</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot81.html">Snapshot 81 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot82.html">Snapshot 82 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot83.html">Snapshot 83 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot84.html">Snapshot 84 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot85.html">Snapshot 85 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot86.html">Snapshot 86 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot87.html">Snapshot 87 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot88.html">Snapshot 88 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot89.html">Snapshot 89 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot90.html">Snapshot 90 (No date)</a></button></H3>
+<HR>
+<H2 lang="en">Snapshots 91 to 100</H2>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot91.html">Snapshot 91 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot92.html">Snapshot 92 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot93.html">Snapshot 93 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot94.html">Snapshot 94 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot95.html">Snapshot 95 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot96.html">Snapshot 96 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot97.html">Snapshot 97 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot98.html">Snapshot 98 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot99.html">Snapshot 99 (No date)</a></button></H3>
+<H3 lang="en"><button><a href="MuseumLobby1_Snapshot100.html">Snapshot 100 (No date)</a></button></H3>
+</details>
+</section>
+<HR>
+<section><details><summary><H5 lang="en">Snapshots 101 to 200</H5></summary>
+<HR>
+<H2 lang="en">Snapshots 101 to 110</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 111 to 120</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 121 to 130</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 131 to 140</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 141 to 150</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 151 to 160</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 161 to 170</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 171 to 180</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 181 to 190</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 191 to 200</H2>
+<p>Section not yet available</p>
+</details>
+</section>
+<HR>
+<section>
+<details><summary><H5 lang="en">Snapshots 201 to 300</H5></summary>
+<HR>
+<H2 lang="en">Snapshots 201 to 210</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 211 to 220</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 221 to 230</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 231 to 240</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 241 to 250</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 251 to 260</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 261 to 270</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 271 to 280</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 281 to 290</H2>
+<p>Section not yet available</p>
+<HR>
+<H2 lang="en">Snapshots 291 to 300</H2>
+<p>Section not yet available</p>
+</details>
+</details>
+</section>
+<HR>
+<section><header>
+<H1 lang="en" id="Bottom">You have reached the bottom of this page!</H1>
+</header></section>
+<HR>
+<footer>
+<p lang="en">Footer is not yet properly setup.</p>
+</footer>
+</BODY>
+<!-- </BODY> !-->
+</HTML>
+<!-- end of script !-->
+<!-- Whitespace section for compilers (the 4 indents are for fun) !-->
+ 
+  
+   
+	
