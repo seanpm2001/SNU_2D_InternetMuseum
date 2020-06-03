@@ -1,0 +1,481 @@
+<!--- start of script !--->
+<!DOCTYPE html>
+<HTML lang="en">
+<BODY>
+<HEAD>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="SNU_UNDERCONSTRUCTION_favicon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .css !--><!-- 04 !--<!-- Stylesheet 1 !--><link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- .css !--><!-- 05 !--<!-- Stylesheet 2 !--><link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 06 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Blackboard_kitV1.00B.css"><!-- The stylesheet for the white text !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 4 !--><link rel="stylesheet" type="text/css" href="BLOGPAGE_CUSTOMV1.01.css"> <!-- The stylesheet for the transparent boxes !--><!-- external resource !-->
+</head>
+<style type="Text/CSS" lang="en" id="CSS_section">
+/* The CSS Transparent box inline stylesheet */
+/* Rule count: 3 */
+div.background { /* Rule 1 */
+	background: url(klematis.jpg) repeat;
+	border: 2px solid black;
+} /* End of rule 1 */
+div.transbox { /* Rule 2 */
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+	border: 1px solid black;
+	opacity: 0.6;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+} /* End of rule 2 */
+div.transbox p { /* Rule 3 */
+	margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+	font-weight: bold;
+	color: #ffffff;
+} /* End of rule 3 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #3 */
+/* The CSS Sidebar inline stylesheet */
+/* Rule count: 5 */
+body { /* Rule 1 */
+	margin: 0;
+} /* End of rule 1 */
+ul { /* Rule 2 */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 16%;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+} /* End of rule 2 */
+li a { /* Rule 3 */
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+} /* End of rule 3 */
+li a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: black;
+} /* End of rule 4 */
+li a:hover:not(.active) { /* Rule 5 */
+	background-color: #555;
+	color: black;
+} /* End of rule 5 */
+/* Stylesheet version: 2 (February 16th 2020) */
+/* Inline stylesheet #4 */
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+*/
+H1 {
+	color: white;
+	font-family: "Tahoma";
+}
+H2 {
+	color: white;
+	font-family: "Tahoma";
+}
+H3 {
+	color: white;
+	font-family: "Tahoma";
+}
+H4 {
+	color: white;
+	font-family: "Tahoma";
+}
+H5 {
+	color: white;
+	font-family: "Tahoma";
+}
+H6 {
+	color: white;
+	font-family: "Tahoma";
+}
+p {
+	color: white;
+	font-family: "Courier";
+}
+HR {
+	color: cyan;
+}
+a:hover {
+	color: cyan;
+}
+a:active {
+	color: blue;
+}
+/* The CSS Topbar (Top navigation bar) Inline stylesheet */
+/* Add a black background color to the top navigation */
+/* Rule count: 7 */
+.topnav { /* Rule 1 */
+	background-color: #333;
+	overflow: hidden;
+} /* End of rule 1 */
+/* Style the links inside the navigation bar */
+.topnav a { /* Rule 2 */
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+} /* End of rule 2 */
+/* Change the color of links on hover */
+.topnav a:hover { /* Rule 3 */
+	background-color: #ddd;
+	color: black;
+} /* End of rule 3 */
+/* Add a color to the active/current link */
+.topnav a.active { /* Rule 4 */
+	background-color: #4CAF50;
+	color: white;
+} /* End of rule 4 */
+/* Dropdown */
+.dropdown { /* Rule 5 */
+	position: relative;
+	display: inline-block;
+} /* End of rule 5 */
+.dropdown-content { /* Rule 6 */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+} /* End of rule 6 */
+.dropdown:hover .dropdown-content { /* Rule 7 */
+  display: block;
+} /* End of rule 7 */
+/* Things to experiment with:
+* dropdown on overflow
+* Different colors
+* Stable white colored links again on topbar
+*/
+/* Stylesheet version: 2 (February 16th 2020) */
+</style>
+<style type="Text/Css" lang="en">
+/* blackboard kit */
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* start of stylesheet */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+hr {
+	color: white;
+}
+HR {
+	color: white;
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* end of stylesheet */
+</style>
+<?php
+// No PHP available
+$Power2_16 = "65536";
+?>
+<script type="Text/JavaScript" lang="en">
+// Start of JavaScript console
+console.log("SocialMedia: Blender museum JavaScript console\n>>>");
+// End of JavaScript console
+</script>
+<ruby type="Text/Ruby" lang="ja">
+
+</ruby>
+<xml type="Text/XML" lang="en">
+
+</xml>
+<TITLE lang="en">Big Buck Bunny - Blender - SNU Internet museum</TITLE>
+</HEAD>
+<BODY BGCOLOR="GREEN"><!-- Not AMOLED, just dark theme (Not all the way yet) !-->
+<BODY BACKGROUND="BlenderLogoTexture.png">
+<div class="topnav">
+<a class="active" href="">|⛩ Blender Museum ⛩|</a><!-- Try to make the name stretch over the entire sidebar to near perfection !-->
+<a href="#PLACEHOLDER">(</a>
+<a href="about:blank">❎ Exit SNU</a><!-- empty link !--><!-- This button always exits the current SNU tab. This should be a built-in page on every browser (guaranteed to work on Chromium/Google Chrome and Mozilla Firefox !-->
+<a href="../!SNU2DSTART.html">⛺ <!-- Home page of mode !-->Home</a>
+<i><a href="Blender_MUSEUM.html">The Blender museum</a></i>
+<!-- Make sure it stays on a single line for all displays (until I can get a scrollbar in) try testing on displays with 1336 pixel width like I am !-->
+</div>
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+<!-- <HR> !-->
+<!-- Page title section can go here as well if desired !-->
+<!-- <HR> !-->
+<img src="INTERNET_MUSEUM_FAVICON.ico" alt="Logo_Profile_Icon" width="225" height="225">
+<HR>
+<li lang="en"><a class="active" href="#home">[Blender - Big Buck Bunny - SNU Internet Museum</a></li>
+<HR>
+<details>
+	<summary><li lang="en"><a href="#EXPLORE">[Big Buck Bunny - Blender - Page index]</a></li></summary>
+	</details>
+	<li lang="en"><HR></li>
+	<details><summary><li id="">(Page navigation)</a></li></summary>
+	<li lang="en"><a href="#Top">Top of the page</a></li>
+	<li lang="en"><a href="#MainVideo">Main video</a></li>
+	<li lang="en"><a href="#SnapshotSection">Snapshot section</a></li>
+	</details>
+	<li lang="en"><HR></li>
+	<nav>
+	<li lang="en">* Section 1 (Page navigation)</li>
+	</nav>
+	<HR>
+	<!--<li lang="en">(Licensing info here)</li>!-->
+	<li lang="en">Copyright SeanWallaWalla (2015-2019)</li>
+	<li lang="en">Copyleft SeanWallaWalla (2019-2020)</li>
+	<li lang="en">SNU (2018-2020)</li>
+	<HR>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<HR>
+<section>
+<img src="" alt="BlenderLogo" width="600" height="230">
+<H1 lang="en"><a href="Blender_MUSEUM.html">Go back</a></H1>
+<H1 lang="en" id="Top">Big Buck Bunny - Blender Internet Museum</H1>
+</section>
+<HR>
+<section>
+<H1 lang="en" id="MainVideo">2008</H1>
+<video width="320" height="180" controls>
+	<source src="../BigBuckBunny_320x180.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video> 
+<H1 lang="en">Made by: Project peach</H1>
+<details><summary><H2 lang="en">File size listing:</H2></summary>
+<H3 lang="en">big_buck_bunny_480p_h264.mov | 249,229,883 bytes (249,229.88 Kilobytes) (249.22 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_480p_stereo.avi | 156,506,028 bytes (156,506.02 Kilobytes) (156.50 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_480p_stereo.ogg | 166,825,767 bytes (168,825.76 Kilobytes) (168.82 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_480p_surround.avi | 220,617,422 bytes (220,617.42 Kilobytes) (220.61 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_480p_surround-fix.avi | 220,514,438 bytes (220,514.43 Kilobytes) (220.51 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_720p_h264.mov | 416,751,190 bytes (416,751.19 Kilobytes) (416.75 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_720p_stereo.avi | 284,437,944 bytes (284,437.94 Kilobytes) (284.43 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_720p_stereo.ogg | 196,898,674 bytes (196,898.67 Kilobytes) (196.89 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_720p_surround.avi | 332,243,668 bytes (332,243.66 Kilobytes) (332.24 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_1080p_h264.mov | 725,106,140 bytes (725,106.14 Kilobytes) (725.10 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_1080p_stereo.avi | 714,744,488 bytes (714,744.48 Kilobytes) (714.74 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_1080p_stereo.ogg | 908,930,329 bytes (908,930.32 Kilobytes) (908.93 Megabytes)</H3>
+<H3 lang="en">big_buck_bunny_1080p_surround.avi | 928,670,754 bytes (928,670.75 Kilobytes) (928.67 Megabytes)</H3>
+<H3 lang="en">BigBuckBunny_320x180.mp4 | 64,657,027 bytes (64,657.02 Kilobytes) (64.65 Megabytes)</H3>
+<H3 lang="en">BigBuckBunny_640x360.m4v | 121,283,919 bytes (121,283.91 Kilobytes) (121.28 Megabytes)</H3>
+<H3 lang="en">All 15 combined: 5,707,417,671 bytes (5,707,417.67 Kilobytes) (5,707.41 Megabytes) (5.70 Gigabytes)</H3>
+</details>
+<H2 lang="en">File formats: MP4, OGG, AVI, MOV, M4V</H2>
+<H2 lang="en">Duration: 9 Minute 57 seconds</H2>
+<H2 lang="en">Framerate: 24 frames per second</H2>
+<details><summary><H2 lang="en">Download</H2></summary>
+<H2 lang="en">All-in-one Download link: <button><a href="../BigBuckBunnyFullSuiteArchive.zip">Click here to download all at once</a></button></H2>
+<details><summary><H2 lang="en">Separate links:</H2></summary>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_480p_h264.mov">big_buck_bunny_480p_h264.mov</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_480p_stereo.avi">big_buck_bunny_480p_stereo.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_480p_stereo.ogg">big_buck_bunny_480p_stereo.ogg</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_480p_surround.avi">big_buck_bunny_480p_surround.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_480p_surround-fix.avi">big_buck_bunny_480p_surround-fix.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_720p_h264.mov">big_buck_bunny_720p_h264.mov</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_720p_stereo.avi">big_buck_bunny_720p_stereo.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_720p_stereo.ogg">big_buck_bunny_720p_stereo.ogg</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_720p_surround.avi">big_buck_bunny_720p_surround.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_1080p_h264.mov">big_buck_bunny_1080p_h264.mov</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_1080p_stereo.avi">big_buck_bunny_1080p_stereo.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../big_buck_bunny_1080p_surround.avi">big_buck_bunny_1080p_surround.avi</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../BigBuckBunny_320x180.mp4">BigBuckBunny_320x180.mp4</a></H6></button></H3>
+<H3 lang="en"><button><H6><a href="../BigBuckBunny_640x360.m4v">BigBuckBunny_640x360.m4v</a></H6></button></H3>
+</details>
+<H2 lang="en">Old notice: Files were added in version 3.04 but due to its massive size, new updates on the site will be very rare now (one of the reasons for the 6 month update schedule)</H2>
+</details>
+<H1 lang="en">Significance:</H1>
+<p lang="en">One of the most successful early blender short files, and also one of the first films to be made in a fully open source 3D modeling software.</p>
+</section>
+<HR>
+<section>
+<H2 lang="en">| <button><H2 lang="en"><a href="Blender_MUSEUM.html">Back (Blender MUSEUM homepage)</a></H2></button> | <button><H2 lang="en"><a href="Blender_MUSEUM.html">Next (Blender MUSEUM homepage</a></H2></button> |</H2>
+</section>
+<HR>
+<section>
+<details><summary><H2 lang="en">View older versions of this page</H2></summary>
+<H3 lang="en">Snapshots 1 to 10</H3>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot1.html">Snapshot 1 (April 13th 2020)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot2.html">Snapshot 2 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot3.html">Snapshot 3 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot4.html">Snapshot 4 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot5.html">Snapshot 5 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot6.html">Snapshot 6 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot7.html">Snapshot 7 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot8.html">Snapshot 8 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot9.html">Snapshot 9 (No date)</a></button></H4>
+<H4 lang="en"><button><a href="BigBuckBunny_Video_Snapshot10.html">Snapshot 10 (No date)</a></button></H4>
+</section>
+<HR>
+<section>
+<header>
+<H1 lang="en" id="Bottom">You have reached the bottom of this page!</H1>
+</header>
+</section>
+<HR>
+<footer>
+<p lang="en">Footer is not yet properly setup.</p>
+</footer>
+</BODY>
+<!-- </BODY> !-->
+</HTML>
+<!--- end of script !--->
+<!-- Blank space for the compiler, with random indents !-->
+ 
+  
+   
+	
